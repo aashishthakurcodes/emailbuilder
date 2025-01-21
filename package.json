@@ -7,7 +7,7 @@
   
     "dev":"nodemon email-builder-backend/server.js",
     "build":"npm install && npm install --prefix email-builder-frontend && npm run build --prefix email-builder-frontend",
-    "start":"nodemon email-builder-backend/server.js"
+    "start":"node email-builder-backend/server.js"
     
   },
   "keywords": [],
