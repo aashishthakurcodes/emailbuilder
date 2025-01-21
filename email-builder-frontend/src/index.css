@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-complex-pattern {
+    background-image: radial-gradient(calc(1.28 * 70px + 26.25px / 2) at left 50% bottom calc(-0.8 * 70px), #a9a9b2 calc(100% - 26.25px), #f9feff calc(101% - 26.25px) 100%, #0000 101%) calc(2 * 70px) calc(-1 * calc(1.5 * 70px + 26.25px)),
+      radial-gradient(calc(1.28 * 70px + 26.25px / 2) at left 50% bottom calc(-0.8 * 70px), #747481 calc(100% - 26.25px), #f9feff calc(101% - 26.25px) 100%, #0000 101%) calc(-1 * 70px) calc(calc(1.5 * 70px + 26.25px) / -2),
+      radial-gradient(calc(1.28 * 70px + 26.25px / 2) at left 50% top calc(-0.8 * 70px), #747481 calc(100% - 26.25px), #f9feff calc(101% - 26.25px) 100%, #0000 101%) 0 calc(1.5 * 70px + 26.25px),
+      radial-gradient(calc(1.28 * 70px + 26.25px / 2) at left 50% top calc(-0.8 * 70px), #a9a9b2 calc(100% - 26.25px), #f9feff calc(101% - 26.25px) 100%, #0000 101%) 70px calc(calc(1.5 * 70px + 26.25px) / 2),
+      linear-gradient(#a9a9b2 50%, #747481 0);
+    background-size: calc(4 * 70px) calc(1.5 * 70px + 26.25px);
+  }
+}

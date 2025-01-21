@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .email-container { max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; }
+    .email-header { font-size: 24px; font-weight: bold; text-align: center; }
+    .email-content { margin: 20px 0; }
+    .email-footer { font-size: 12px; text-align: center; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <div class="email-header"><%= title %></div>
+    <div class="email-content"><%= content %></div>
+    <% if (imageUrls) { imageUrls.forEach(url => { %>
+      <img src="<%= url %>" alt="Email Image" style="max-width: 100%;">
+    <% }) } %>
+    <div class="email-footer"><%= footer %></div>
+  </div>
+</body>
+</html>
