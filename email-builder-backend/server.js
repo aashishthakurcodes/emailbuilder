@@ -10,7 +10,7 @@ const app = express();
 
 // Enable CORS
 app.use(cors({
-  origin: 'http://localhost:5173', // Allow requests from your frontend
+  origin: 'https://emailbuilder-1-5cwp.onrender.com/', // Allow requests from your frontend
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
   allowedHeaders: ['Content-Type'], // Allowed headers
 }));
