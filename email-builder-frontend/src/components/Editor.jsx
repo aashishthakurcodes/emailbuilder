@@ -22,7 +22,7 @@ const Editor = () => {
   //Fetching Templates
   const fetchTemplates = () => {
     axios
-      .get('http://localhost:5000/api/getEmailLayouts')
+      .get('https://emailbuilder-1-5cwp.onrender.com/api/getEmailLayouts')
       .then((response) => {
         console.log(response.data);
         setLayout(response.data);
@@ -40,7 +40,7 @@ const Editor = () => {
     setImagePreview(URL.createObjectURL(file));
 
     axios
-      .post('http://localhost:5000/api/uploadImage', formData)
+      .post('https://emailbuilder-1-5cwp.onrender.com/api/uploadImage', formData)
       .then((response) => {
         // If the template is being edited, update the imageUrls
         if (editingTemplate) {
@@ -63,8 +63,8 @@ const Editor = () => {
     const emailConfig = { title, content, footer, imageUrls };
 
     const apiUrl = editingTemplate
-      ? `http://localhost:5000/api/updateEmailConfig/${editingTemplate._id}`
-      : 'http://localhost:5000/api/uploadEmailConfig';
+      ? `https://emailbuilder-1-5cwp.onrender.com/api/updateEmailConfig/${editingTemplate._id}`
+      : 'https://emailbuilder-1-5cwp.onrender.com/api/uploadEmailConfig';
 
     const method = editingTemplate ? 'put' : 'post';
 
@@ -102,7 +102,7 @@ const Editor = () => {
   //DeleteTemplate
   const deleteTemplate = (templateId) => {
     axios
-      .delete(`http://localhost:5000/api/deleteEmailConfig/${templateId}`)
+      .delete(`https://emailbuilder-1-5cwp.onrender.com/api/deleteEmailConfig/${templateId}`)
       .then(() => {
         toast.error('Template deleted successfully!');
         fetchTemplates();
